@@ -4,7 +4,7 @@ import sys
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/../..'))
 
 import unittest
-from tests.cases.google_test_case import GoogleTestCase
+from tests.cases.google_test_case import GoogleTestCaseSimple
 
 
 class TestSuite1(unittest.TestCase):
@@ -12,7 +12,7 @@ class TestSuite1(unittest.TestCase):
         # suite of TestCases
         self.suite = unittest.TestSuite()
         self.suite.addTests([
-            unittest.defaultTestLoader.loadTestsFromTestCase(GoogleTestCase),
+            unittest.defaultTestLoader.loadTestsFromTestCase(GoogleTestCaseSimple),
 
         ])
         unittest.TextTestRunner()
